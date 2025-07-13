@@ -6,16 +6,19 @@ const deck = [
   {
     keyword: 'original',
     img: originalFlag,
+    heading: 'Original Pride Flag',
     description: 'Created by Gilbert Baker in 1978.',
   },
   {
     keyword: 'progress',
     img: progressFlag,
+    heading: 'Progress Pride Flag',
     description: 'Created by Daniel Quasar in 2018.',
   },
   {
     keyword: 'trans',
     img: transFlag,
+    heading: 'Trans Pride Flag',
     description: 'Created by Monica Helms in 1999.',
   },
 ];
