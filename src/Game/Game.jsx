@@ -30,15 +30,49 @@ export default function Game({ originalDeck, triggerDiscover }) {
       }
     });
 
+    prevCard.current.push(card);
     setDeck(newDeck);
   }
 
-  function deselectCards() {}
+  function deselectCards() {
+    const newDeck = [...deck].map((card) => {
+      return { ...card, isSelected: false };
+    });
 
-  function discoverCard(card) {}
+    setDeck(newDeck);
+  }
+
+  function discoverCard(card) {
+    const newDeck = [...deck].map((elm) => {
+      if (elm.keyword === card.keyword) {
+        return { ...elm, isDiscovered: true };
+      } else {
+        return elm;
+      }
+    });
+
+    setDeck(newDeck);
+  }
 
   function handleFlip(card) {
+    if (prevCard.current.length >= 2) return;
+    if (prevCard.current === card) return;
+
     selectCard(card);
+
+    if (prevCard.current.length === 1) return;
+
+    if (prevCard.current[0].keyword === card.keyword) {
+      discoverCard(card);
+      triggerDiscover(card);
+      prevCard.current = [];
+      return;
+    }
+
+    setTimeout(() => {
+      prevCard.current = [];
+      deselectCards();
+    }, 1500);
   }
 
   return (
