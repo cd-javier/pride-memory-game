@@ -14,8 +14,10 @@ function App({ deck }) {
     setDiscoveredCards(
       [...discoveredCards].map((elm) => {
         if (elm === card) {
-          return { ...card, isOpen: !elm.isOpen };
-        } else return { ...card, isOpen: false };
+          return { ...elm, isOpen: !elm.isOpen };
+        } else {
+          return { ...elm, isOpen: false };
+        }
       })
     );
   }

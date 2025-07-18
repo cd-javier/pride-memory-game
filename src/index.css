@@ -1,0 +1,24 @@
+@import url(./modern-normalize.css);
+
+:root {
+  --gradient-1: #f1eff9;
+  --gradient-2: #c1b7ea;
+  --dark: #574785;
+  --light: #d7d0f2;
+  --mid: #d7d0f2;
+}
+
+body {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    var(--gradient-1) 0%,
+    var(--gradient-2) 100%
+  );
+  color: var(--dark);
+}
+
+h1 {
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
+}
