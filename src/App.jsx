@@ -24,6 +24,7 @@ function App({ deck }) {
 
   return (
     <div className="app">
+      <h1>Match The Pride</h1>
       <Game originalDeck={deck} triggerDiscover={triggerDiscover} />
       <Legend
         deck={discoveredCards}
