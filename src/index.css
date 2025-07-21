@@ -6,7 +6,7 @@
   --outline: #ebebeb;
   --text: #8d8d8d;
 
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 body {
