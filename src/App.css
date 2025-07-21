@@ -1,7 +1,24 @@
 .app {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: min-content min-content 1fr;
   height: 100svh;
   padding: 1rem 1rem 0 1rem;
   gap: 1rem;
+
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media only screen and (orientation: landscape) {
+  .app {
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: min-content 1fr;
+    height: 100vh;
+
+    max-width: none;
+  }
+
+  h1 {
+    grid-column: span 2;
+  }
 }
