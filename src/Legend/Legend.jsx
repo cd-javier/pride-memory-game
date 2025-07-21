@@ -11,7 +11,7 @@ export default function Legend({ deck, totalPairs, handleLegendToggle }) {
       <div className="count">
         {deck.length}/{totalPairs}
         {deck.length === 1 ? ' pair ' : ' pairs '}
-        discovered
+        found
       </div>
       <div className="content">
         {deck.length === 0 ? (
