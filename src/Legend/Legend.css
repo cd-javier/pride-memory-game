@@ -1,18 +1,30 @@
 .legend {
-  background-color: var(--mid);
-  border: 3px solid white;
-  border-bottom: none;
   flex: 1;
+
   overflow-y: auto;
 
   display: flex;
   flex-direction: column;
 
   border-radius: 1rem 1rem 0 0;
+  background-color: var(--sec-bg);
+  box-shadow: var(--shadow);
 }
 
-.legend svg {
-  fill: var(--dark);
+.legend::-webkit-scrollbar {
+  width: 8px;
+}
+
+.legend::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+
+.legend::-webkit-scrollbar-thumb {
+  background-color: var(--outline);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 .legend .count {
@@ -28,42 +40,6 @@
   flex-direction: column;
 }
 
-.single-legend {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.single-legend .heading {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.single-legend .heading .title {
-  flex: 1;
-}
-
-.single-legend .heading img {
-  width: 30%;
-}
-
-.single-legend .heading .arrow {
-  width: 40px;
-  line-height: 0;
-
-  transition: transform 0.5s ease;
-}
-
-.single-legend .heading .arrow.open {
-  transform: rotate(-180deg);
-}
-
-.single-legend .description {
-  font-size: 0.75rem;
-}
-
 .empty-state {
   flex: 1;
 
@@ -76,10 +52,12 @@
 
 .empty-state p {
   margin: 0;
+  color: var(--outline);
 }
 
 .empty-state svg {
   width: 30%;
+  fill: var(--outline);
 }
 
 .legend .signature {

@@ -1,20 +1,18 @@
 @import url(./modern-normalize.css);
 
 :root {
-  --gradient-1: #f1eff9;
-  --gradient-2: #c1b7ea;
-  --dark: #574785;
-  --light: #d7d0f2;
-  --mid: #d7d0f2;
+  --bg: #f9f9f9;
+  --sec-bg: #fcfcfc;
+  --outline: #ebebeb;
+  --text: #8d8d8d;
+
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 body {
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    var(--gradient-1) 0%,
-    var(--gradient-2) 100%
-  );
-  color: var(--dark);
+  min-height: 100svh;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 h1 {
