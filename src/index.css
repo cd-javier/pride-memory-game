@@ -1,5 +1,23 @@
 @import url(./modern-normalize.css);
 
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-SemiBold.woff2') format('woff2'),
+    url('/fonts/Manrope-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-Light.woff2') format('woff2'),
+    url('/fonts/Manrope-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg: #f9f9f9;
   --sec-bg: #fcfcfc;
@@ -13,10 +31,13 @@ body {
   min-height: 100svh;
   background-color: var(--bg);
   color: var(--text);
+  font-family: Manrope, sans-serif;
+  font-weight: 300;
 }
 
 h1 {
   margin: 0;
   padding: 0.5rem;
   text-align: center;
+  font-weight: 600;
 }
