@@ -34,7 +34,7 @@ function App({ deck }) {
 
   return (
     <div className="app">
-      <h1>Match The Pride</h1>
+      <h1>MATCH THE PRIDE</h1>
       {showOverlay && <CompletionOverlay closeOverlay={closeOverlay} />}
       <Game originalDeck={deck} triggerDiscover={triggerDiscover} />
       <Legend

@@ -20,7 +20,7 @@
 .single-legend .heading h2 {
   flex: 1;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: normal;
 }
 
 .single-legend .heading img {
@@ -60,5 +60,5 @@
 }
 
 .single-legend .description a {
-  color: inherit;
+  text-align: center;
 }

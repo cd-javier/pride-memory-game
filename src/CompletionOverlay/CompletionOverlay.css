@@ -33,6 +33,10 @@
   margin: 0;
 }
 
+.modal h2 {
+  font-weight: 600;
+}
+
 .modal button {
   appearance: none;
   border: none;
@@ -40,4 +44,5 @@
   color: var(--sec-bg);
   padding: 0.5rem 1rem;
   border-radius: 4px;
+  font-weight: 300;
 }
