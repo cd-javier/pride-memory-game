@@ -24,7 +24,7 @@
   height: 100%;
   backface-visibility: hidden;
   box-shadow: var(--shadow);
-  border: 3px solid var(--outline);
+  border: 3px solid white;
 
   border-radius: 8px;
   overflow: hidden;

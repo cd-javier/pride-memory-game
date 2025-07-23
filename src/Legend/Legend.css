@@ -51,7 +51,6 @@
   gap: 1rem;
 
   color: var(--outline);
-  font-weight: 600;
 }
 
 .empty-state p {

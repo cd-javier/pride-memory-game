@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useRef } from 'react';
 import './Game.css';
-import Card from './Card';
+import Card from './Card/Card';
 import shuffle from '../utils/shuffle';
 
 function prepareDeck(deck) {
