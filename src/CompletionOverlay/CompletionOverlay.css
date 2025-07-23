@@ -10,7 +10,6 @@
 }
 
 .modal {
-  z-index: 2;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -31,6 +30,10 @@
 
 .modal > * {
   margin: 0;
+}
+
+.modal p {
+  line-height: 150%;
 }
 
 .modal h2 {
