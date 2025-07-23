@@ -6,7 +6,7 @@
   left: 0;
   top: 0;
 
-  background: #0008;
+  background: var(--overlay-bg);
 }
 
 .modal {
@@ -37,6 +37,7 @@
 }
 
 .modal h2 {
+  font-size: 1.25rem;
   font-weight: 600;
 }
 

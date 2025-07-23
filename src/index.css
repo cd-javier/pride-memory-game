@@ -28,12 +28,26 @@
 }
 
 :root {
-  --bg: #f9f9f9;
+  /* LIGHT */
+  /* --bg: #f9f9f9;
   --sec-bg: #fcfcfc;
   --outline: #ebebeb;
-  --text: #8d8d8d;
-
+  --text: #8d8d8d; 
+  --text-body: #8d8d8d; 
+  --link-hover: black;
   --shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  --overlay-bg: #0008;
+  */
+
+  /* DARK */
+  --bg: #262626;
+  --sec-bg: #333333;
+  --text: #9b9b9b;
+  --text-body: #cccccc;
+  --outline: #595959;
+  --link-hover: white;
+  --shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  --overlay-bg: #000a;
 }
 
 body,
@@ -54,5 +68,5 @@ a {
 }
 
 a:hover {
-  color: black;
+  color: var(--link-hover);
 }
