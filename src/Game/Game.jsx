@@ -14,7 +14,6 @@ function prepareDeck(deck) {
     };
   });
 
-  return doubledDeck;
   return shuffle(doubledDeck);
 }
 
