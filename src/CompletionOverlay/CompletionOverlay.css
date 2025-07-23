@@ -1,0 +1,43 @@
+.overlay {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+
+  background: #0008;
+}
+
+.modal {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 80vw;
+
+  background-color: var(--sec-bg);
+  border: 1px solid var(--outline);
+  border-radius: 8px;
+  padding: 1rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.modal > * {
+  margin: 0;
+}
+
+.modal button {
+  appearance: none;
+  border: none;
+  background: var(--text);
+  color: var(--sec-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}

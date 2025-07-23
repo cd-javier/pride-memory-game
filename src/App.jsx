@@ -2,12 +2,18 @@ import { useState } from 'react';
 import './App.css';
 import Game from './game/Game';
 import Legend from './Legend/Legend';
+import CompletionOverlay from './CompletionOverlay/CompletionOverlay';
 
 function App({ deck }) {
   const [discoveredCards, setDiscoveredCards] = useState([]);
+  const [showOverlay, setShowOverlay] = useState(false);
 
   function triggerDiscover(card) {
-    setDiscoveredCards([{ ...card, isOpen: false }, ...discoveredCards]);
+    const discoveredDeck = [{ ...card, isOpen: false }, ...discoveredCards];
+    setDiscoveredCards(discoveredDeck);
+    if (discoveredDeck.length === deck.length) {
+      setShowOverlay(true);
+    }
   }
 
   function handleLegendToggle(card) {
@@ -22,9 +28,14 @@ function App({ deck }) {
     );
   }
 
+  function closeOverlay() {
+    setShowOverlay(false);
+  }
+
   return (
     <div className="app">
       <h1>Match The Pride</h1>
+      {showOverlay && <CompletionOverlay closeOverlay={closeOverlay} />}
       <Game originalDeck={deck} triggerDiscover={triggerDiscover} />
       <Legend
         deck={discoveredCards}
