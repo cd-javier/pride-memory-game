@@ -7,15 +7,21 @@ export default function CompletionOverlay({ closeOverlay }) {
     closeOverlay();
   }
 
-  confetti({
-    particleCount: 300,
-    spread: 160,
-    origin: { y: 0.7 },
-    ticks: 300,
-    colors: ['#E50202', '#FF8B00', '#FFED04', '#008128', '#004DFF', '#760689'],
-  });
-
-  useEffect(() => {}, []);
+  useEffect(() => {
+    confetti({
+      particleCount: 300,
+      spread: 160,
+      ticks: 300,
+      colors: [
+        '#E50202',
+        '#FF8B00',
+        '#FFED04',
+        '#008128',
+        '#004DFF',
+        '#760689',
+      ],
+    });
+  }, []);
 
   return (
     <div className="overlay">
