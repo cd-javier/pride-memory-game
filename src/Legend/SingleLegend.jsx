@@ -9,7 +9,7 @@ export default function SingleLegend({ card, handleToggle }) {
     <div className="single-legend">
       <div className="heading" onClick={handleClick}>
         <img src={card.img} alt={card.heading} />
-        <div className="title">{card.heading}</div>
+        <h2>{card.heading}</h2>
         <div className={`arrow ${card.isOpen ? 'open' : ''}`}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>menu-down</title>
@@ -17,7 +17,18 @@ export default function SingleLegend({ card, handleToggle }) {
           </svg>
         </div>
       </div>
-      {card.isOpen && <div className="description">{card.description}</div>}
+      {card.isOpen && (
+        <div className="description">
+          {card.description.map((p, index) => {
+            return <p key={index}>{p}</p>;
+          })}
+          {card.link && (
+            <a href={card.link.src} target="_blank" rel="noopener noreferrer">
+              {card.link.title}
+            </a>
+          )}
+        </div>
+      )}
     </div>
   );
 }

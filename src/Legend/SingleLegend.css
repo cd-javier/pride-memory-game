@@ -17,8 +17,10 @@
   gap: 1rem;
 }
 
-.single-legend .heading .title {
+.single-legend .heading h2 {
   flex: 1;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .single-legend .heading img {
@@ -46,4 +48,17 @@
 
 .single-legend .description {
   font-size: 0.75rem;
+  line-height: 150%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.single-legend .description p {
+  margin: 0;
+}
+
+.single-legend .description a {
+  color: inherit;
 }
