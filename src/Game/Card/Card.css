@@ -32,9 +32,10 @@
 
 .card-front {
   background-color: var(--card-bg-color);
-  background-image: url('./card-bg.png');
-  background-size: cover;
-  background-position: center;
+}
+
+.card-front svg {
+  fill: var(--outline);
 }
 
 .card-back {
