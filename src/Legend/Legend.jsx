@@ -28,9 +28,26 @@ export default function Legend({ deck, totalPairs, handleLegendToggle }) {
             </svg>
           </div>
         ) : (
-          deck.map((card, index) => (
-            <SingleLegend card={card} key={index} handleToggle={handleToggle} />
-          ))
+          <>
+            {deck.map((card, index) => (
+              <SingleLegend
+                card={card}
+                key={index}
+                handleToggle={handleToggle}
+              />
+            ))}
+            <div className="notes-on-use">
+              <h2>Notes On Use</h2>
+              <p>
+                Each of these flags has been created or adopted by members of
+                the LGBTQ+ community to celebrate identity, visibility, and
+                activism. Where possible, we’ve prioritised sources from
+                established LGBTQ+ organisations and activist-led platforms to
+                ensure accuracy and respect. This document was last updated
+                24/07/2025.
+              </p>
+            </div>
+          </>
         )}
       </div>
       <div className="signature">

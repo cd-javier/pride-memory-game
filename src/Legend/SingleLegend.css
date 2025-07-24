@@ -6,11 +6,10 @@
 
   border-top: 1px solid var(--outline);
 
-
   color: var(--text-body);
 }
 
-.single-legend:last-child {
+.single-legend:nth-last-child(2) {
   border-bottom: 1px solid var(--outline);
 }
 
