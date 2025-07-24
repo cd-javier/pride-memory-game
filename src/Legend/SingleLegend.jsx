@@ -18,16 +18,27 @@ export default function SingleLegend({ card, handleToggle }) {
         </div>
       </div>
       {card.isOpen && (
-        <div className="description">
-          {card.info.en.description.map((p, index) => {
-            return <p key={index}>{p}</p>;
-          })}
+        <>
+          <div className="description">
+            {card.info.en.description.map((p, index) => {
+              return <p key={index}>{p}</p>;
+            })}
+          </div>
           {card.link && (
-            <a href={card.link.src} target="_blank" rel="noopener noreferrer">
-              {card.link.title}
-            </a>
+            <div className="link">
+              <a
+                href={card.link.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={card.link.desc ? card.link.desc : card.link.title}
+                aria-label={card.link.desc ? card.link.desc : card.link.title}
+              >
+                {card.link.title}
+              </a>
+              {card.link.desc && <p>{card.link.desc}</p>}
+            </div>
           )}
-        </div>
+        </>
       )}
     </div>
   );

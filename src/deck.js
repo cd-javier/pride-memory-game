@@ -25,8 +25,9 @@ const deck = [
       },
     },
     link: {
-      src: '#',
-      title: 'Link',
+      src: 'http://stonewall.org.uk',
+      title: 'Stonewall (UK)',
+      desc: 'The UK’s largest LGBTQ+ charity, advocating for legal reform, inclusive education, and equality across sexual orientations and gender identities.',
     },
   },
   {
@@ -43,8 +44,9 @@ const deck = [
       },
     },
     link: {
-      src: '#',
-      title: 'Link',
+      src: 'https://transmediawatch.org',
+      title: 'Trans Media Watch (UK)',
+      desc: 'British charity improving media representation of trans and intersex individuals to foster social acceptance and accurate portrayal.',
     },
   },
   {
@@ -61,8 +63,9 @@ const deck = [
       },
     },
     link: {
-      src: '#',
-      title: 'Link',
+      src: 'https://egale.ca',
+      title: 'Egale Canada',
+      desc: "Canada's leading 2SLGBTQI+ advocacy charity (English and French), influencing policy, research, visibility, and intersex-inclusive education.",
     },
   },
   {
@@ -78,8 +81,9 @@ const deck = [
       },
     },
     link: {
-      src: '#',
-      title: 'Link',
+      src: 'https://each.education',
+      title: 'EACH (Educational Action Challenging Homophobia, UK)',
+      desc: 'UK charity delivering anti-bullying training and support focused on lesbian, gay, bisexual, trans, and queer individuals, with strong emphasis on education.',
     },
   },
   {
@@ -96,8 +100,9 @@ const deck = [
       },
     },
     link: {
-      src: '#',
-      title: 'Link',
+      src: 'https://kaleidoscopetrust.com',
+      title: 'Kaleidoscope Trust (UK)',
+      desc: 'UK-based campaign charity promoting global LGBTQ+ human rights, including bisexual advocacy, especially across the Commonwealth.',
     },
   },
   {
@@ -114,8 +119,9 @@ const deck = [
       },
     },
     link: {
-      src: '#',
-      title: 'Link',
+      src: 'https://kindspace.ca',
+      title: 'Kind Space (Canada)',
+      desc: 'Ottawa-based LGBTQ2S+ community centre serving a diverse range including pansexual, intersex, non-binary, Two-Spirit and QTBIPoC individuals.',
     },
   },
   {
@@ -132,8 +138,9 @@ const deck = [
       },
     },
     link: {
-      src: '#',
-      title: 'Link',
+      src: 'https://ilga.org',
+      title: 'ILGA World',
+      desc: 'Worldwide federation of LGBTQ+ groups, with member organisations in many countries advocating for asexual and ace-spectrum rights.',
     },
   },
   {
@@ -150,8 +157,9 @@ const deck = [
       },
     },
     link: {
-      src: '#',
-      title: 'Link',
+      src: 'https://www.stonewall.org.uk',
+      title: 'Stonewall (UK)',
+      desc: 'Stonewall supports visibility and rights for genderqueer and non-binary people through campaigns, legal reforms, and inclusive programs.',
     },
   },
   {
@@ -168,8 +176,9 @@ const deck = [
       },
     },
     link: {
-      src: '#',
-      title: 'Link',
+      src: 'https://ilga.org',
+      title: 'ILGA World',
+      desc: "Global entity with strong non-binary inclusion efforts—ILGA's member base spans dozens of countries and provides multilingual resources.",
     },
   },
   {
@@ -186,8 +195,9 @@ const deck = [
       },
     },
     link: {
-      src: '#',
-      title: 'Link',
+      src: 'https://www.rainbowcommunities.org.uk',
+      title: 'Rainbow Communities (UK)',
+      desc: 'UK ‑based “by and for” charity supporting vulnerable LGBTQ+ individuals and allies, fostering solidarity across cultural and generational lines.',
     },
   },
 ];

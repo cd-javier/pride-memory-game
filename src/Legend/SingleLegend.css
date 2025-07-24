@@ -61,6 +61,16 @@
   margin: 0;
 }
 
-.single-legend .description a {
-  text-align: center;
+.single-legend .link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text);
+}
+
+.single-legend .link p {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
 }
