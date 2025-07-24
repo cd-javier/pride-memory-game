@@ -66,17 +66,17 @@
 
 .notes-on-use {
   padding: 1rem;
-  
+
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   justify-content: flex-end;
-}
-
-.notes-on-use > * {
   font-size: 0.75rem;
   line-height: 150%;
+}
+
+.notes-on-use p {
   margin: 0;
 }
 

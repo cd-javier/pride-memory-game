@@ -37,14 +37,18 @@ export default function Legend({ deck, totalPairs, handleLegendToggle }) {
               />
             ))}
             <div className="notes-on-use">
-              <h2>Notes On Use</h2>
               <p>
-                Each of these flags has been created or adopted by members of
-                the LGBTQ+ community to celebrate identity, visibility, and
-                activism. Where possible, we’ve prioritised sources from
-                established LGBTQ+ organisations and activist-led platforms to
-                ensure accuracy and respect. This document was last updated
-                24/07/2025.
+                For references and sources related to the information presented
+                in this game, please consult our document titled{' '}
+                <a
+                  href="./pride-flags.pdf"
+                  download="Sourcing Pride Flags & Their Meanings.pdf"
+                  title="Download Sourcing Pride Flags & Their Meanings"
+                  aria-label="Download Sourcing Pride Flags & Their Meanings"
+                  style={{ fontStyle: 'italic' }}
+                >
+                  Sourcing Pride Flags & Their Meanings.
+                </a>
               </p>
             </div>
           </>
