@@ -50,3 +50,7 @@
   border-radius: 4px;
   font-weight: 300;
 }
+
+.modal button:hover {
+  background-color: var(--text-body);
+}
