@@ -10,7 +10,12 @@ function App({ deck }) {
   const [showCompletionOverlay, setShowCompletionOverlay] = useState(false);
 
   function triggerDiscover(card) {
-    const discoveredDeck = [{ ...card, isOpen: false }, ...discoveredCards];
+    const discoveredDeck = [
+      { ...card, isOpen: true },
+      ...discoveredCards.map((card) => {
+        return { ...card, isOpen: false };
+      }),
+    ];
     setDiscoveredCards(discoveredDeck);
 
     if (discoveredDeck.length === deck.length) {
