@@ -1,18 +1,20 @@
 import { useState } from 'react';
 import './App.css';
-import Game from './game/Game';
+import Game from './Game/Game';
 import Legend from './Legend/Legend';
-import CompletionOverlay from './CompletionOverlay/CompletionOverlay';
+import Overlay from './Overlay/Overlay';
 
 function App({ deck }) {
   const [discoveredCards, setDiscoveredCards] = useState([]);
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [showInitialOverlay, setShowInitialOverlay] = useState(true);
+  const [showCompletionOverlay, setShowCompletionOverlay] = useState(false);
 
   function triggerDiscover(card) {
     const discoveredDeck = [{ ...card, isOpen: false }, ...discoveredCards];
     setDiscoveredCards(discoveredDeck);
+
     if (discoveredDeck.length === deck.length) {
-      setShowOverlay(true);
+      setShowCompletionOverlay(true);
     }
   }
 
@@ -28,14 +30,46 @@ function App({ deck }) {
     );
   }
 
-  function closeOverlay() {
-    setShowOverlay(false);
+  function closeInitialOverlay() {
+    setShowInitialOverlay(false);
+  }
+
+  function closeCompletionOverlay() {
+    setShowCompletionOverlay(false);
   }
 
   return (
     <div className="app">
+      {showInitialOverlay && (
+        <Overlay
+          closeOverlay={closeInitialOverlay}
+          buttonContent="Play with Pride!"
+        >
+          <h2>Welcome to the Pride Memory Game!</h2>
+          <p>
+            Pride is about remembering where we’ve come from and celebrating who
+            we are.
+          </p>
+          <p>
+            Match the flags, learn their stories, and honour the beautiful
+            diversity of our community.
+          </p>
+        </Overlay>
+      )}
+      {showCompletionOverlay && (
+        <Overlay
+          closeOverlay={closeCompletionOverlay}
+          showConfetti
+          buttonContent="Explore the flags"
+        >
+          <h2>All Pairs Found!</h2>
+          <p>
+            You’ve matched every pride flag! Now take a moment to explore what
+            each one stands for.
+          </p>
+        </Overlay>
+      )}
       <h1>MATCH THE PRIDE</h1>
-      {showOverlay && <CompletionOverlay closeOverlay={closeOverlay} />}
       <Game originalDeck={deck} triggerDiscover={triggerDiscover} />
       <Legend
         deck={discoveredCards}
