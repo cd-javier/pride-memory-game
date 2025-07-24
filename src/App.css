@@ -22,7 +22,7 @@ h1 {
     grid-template-rows: min-content 1fr;
     height: 100vh;
 
-    max-width: none;
+    max-width: 1440px;
   }
 
   h1 {
