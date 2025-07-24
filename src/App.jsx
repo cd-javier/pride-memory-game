@@ -69,8 +69,12 @@ function App({ deck }) {
         >
           <h2>All Pairs Found!</h2>
           <p>
-            You’ve matched every pride flag! Now take a moment to explore what
-            each one stands for.
+            You’ve matched every pride flag, now explore the stories, meanings,
+            and communities behind each one.
+          </p>
+          <p>
+            Each card links to organisations where you can learn more, support,
+            or take action.
           </p>
         </Overlay>
       )}
