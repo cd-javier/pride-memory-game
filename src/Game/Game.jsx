@@ -72,7 +72,7 @@ export default function Game({ originalDeck, triggerDiscover }) {
     setTimeout(() => {
       prevCard.current = [];
       deselectCards();
-    }, 1500);
+    }, 1000);
   }
 
   return (

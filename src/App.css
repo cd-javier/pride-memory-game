@@ -9,11 +9,47 @@
   margin: 0 auto;
 }
 
+header {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--outline);
+  background-color: var(--sec-bg);
+  box-shadow: var(--shadow);
+}
+
 h1 {
   margin: 0;
   text-align: center;
   font-weight: 600;
-  letter-spacing: 0.2rem;
+  font-size: 1.75rem;
+}
+
+.pride-title {
+  letter-spacing: 0.3rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  -webkit-text-stroke: 1.5px white; 
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.pride-title .p {
+  color: #e22116;
+}
+
+.pride-title .r {
+  color: #eade30;
+}
+
+.pride-title .i {
+  color: #79B82A;
+}
+
+.pride-title .d {
+  color: #2D58A5;
+}
+
+.pride-title .e {
+  color: #6E2380;
 }
 
 @media only screen and (orientation: landscape) {
@@ -25,7 +61,7 @@ h1 {
     max-width: 1440px;
   }
 
-  h1 {
+  header {
     grid-column: span 2;
   }
 }

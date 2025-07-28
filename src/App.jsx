@@ -4,6 +4,22 @@ import Game from './Game/Game';
 import Legend from './Legend/Legend';
 import Overlay from './Overlay/Overlay';
 
+function syncThemeColorWithCSSVar(varName) {
+  const cssColor = getComputedStyle(document.documentElement)
+    .getPropertyValue(varName)
+    .trim();
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+
+  if (themeMeta) {
+    themeMeta.setAttribute('content', cssColor);
+  } else {
+    const newMeta = document.createElement('meta');
+    newMeta.name = 'theme-color';
+    newMeta.content = cssColor;
+    document.head.appendChild(newMeta);
+  }
+}
+
 function App({ deck }) {
   const [discoveredCards, setDiscoveredCards] = useState([]);
   const [showInitialOverlay, setShowInitialOverlay] = useState(true);
@@ -37,10 +53,12 @@ function App({ deck }) {
 
   function closeInitialOverlay() {
     setShowInitialOverlay(false);
+    syncThemeColorWithCSSVar('--bg');
   }
 
   function closeCompletionOverlay() {
     setShowCompletionOverlay(false);
+    syncThemeColorWithCSSVar('--bg');
   }
 
   return (
@@ -50,7 +68,9 @@ function App({ deck }) {
           closeOverlay={closeInitialOverlay}
           buttonContent="Play with Pride!"
         >
-          <h2>Welcome to the Pride Memory Game!</h2>
+          <h2>
+            Welcome to the <br /> Pride Memory Game!
+          </h2>
           <p>
             Pride is about remembering where we’ve come from and celebrating who
             we are.
@@ -78,7 +98,19 @@ function App({ deck }) {
           </p>
         </Overlay>
       )}
-      <h1>MATCH THE PRIDE</h1>
+      <header>
+        <h1>
+          <span className="pride-title">
+            <span className="p">P</span>
+            <span className="r">R</span>
+            <span className="i">I</span>
+            <span className="d">D</span>
+            <span className="e">E</span>
+          </span>{' '}
+          <br />
+          MEMORY GAME
+        </h1>
+      </header>
       <Game originalDeck={deck} triggerDiscover={triggerDiscover} />
       <Legend
         deck={discoveredCards}

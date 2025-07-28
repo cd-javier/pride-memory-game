@@ -27,28 +27,41 @@
   font-display: swap;
 }
 
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('/fonts/LibreFranklin-Black.woff2') format('woff2'),
+        url('/fonts/LibreFranklin-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 :root {
   /* LIGHT */
-  /* --bg: #f9f9f9;
+  --bg: #f9f9f9;
   --sec-bg: #fcfcfc;
   --outline: #ebebeb;
+  --card-outline: white;
   --text: #8d8d8d; 
-  --text-body: #8d8d8d; 
+  --text-body: #555555; 
   --link-hover: black;
   --shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   --overlay-bg: #0008;
-  */
+ 
 
   /* DARK */
-  --bg: #262626;
+  /* --bg: #262626;
   --sec-bg: #333333;
   --text: #9b9b9b;
   --text-body: #cccccc;
   --outline: #595959;
+  --card-outline: var(--outline);
   --link-hover: white;
   --shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  --overlay-bg: #000a;
-}
+  --overlay-bg: #000a; */
+} 
 
 body,
 #root {

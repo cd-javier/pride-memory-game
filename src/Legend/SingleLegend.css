@@ -41,7 +41,7 @@
 }
 
 .single-legend svg {
-  fill: var(--text);
+  fill: var(--text-body);
 }
 
 .single-legend .heading .arrow.open {
@@ -67,6 +67,10 @@
   gap: 0.5rem;
   font-size: 0.75rem;
   color: var(--text);
+}
+
+.single-legend .link a {
+  width: max-content;
 }
 
 .single-legend .link p {
