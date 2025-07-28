@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://cd-javier.github.io/pride-memory-game",
+  "homepage": "https://www.pridememorygame.com",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
