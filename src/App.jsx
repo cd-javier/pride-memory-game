@@ -3,6 +3,7 @@ import './App.css';
 import Game from './Game/Game';
 import Legend from './Legend/Legend';
 import Overlay from './Overlay/Overlay';
+import confetti from 'canvas-confetti';
 
 function syncThemeColorWithCSSVar(varName) {
   const cssColor = getComputedStyle(document.documentElement)
@@ -61,6 +62,22 @@ function App({ deck }) {
     syncThemeColorWithCSSVar('--bg');
   }
 
+  function handlePrideClick() {
+    confetti({
+      particleCount: 300,
+      spread: 160,
+      ticks: 300,
+      colors: [
+        '#E50202',
+        '#FF8B00',
+        '#FFED04',
+        '#008128',
+        '#004DFF',
+        '#760689',
+      ],
+    });
+  }
+
   return (
     <div className="app">
       {showInitialOverlay && (
@@ -72,7 +89,7 @@ function App({ deck }) {
             Welcome to the <br /> Pride Memory Game!
           </h2>
           <p>
-            Pride is about remembering where we’ve come from and celebrating who
+            Pride is about remembering where we've come from and celebrating who
             we are.
           </p>
           <p>
@@ -89,7 +106,7 @@ function App({ deck }) {
         >
           <h2>All Pairs Found!</h2>
           <p>
-            You’ve matched every pride flag, now explore the stories, meanings,
+            You've matched every pride flag, now explore the stories, meanings,
             and communities behind each one.
           </p>
           <p>
@@ -100,7 +117,7 @@ function App({ deck }) {
       )}
       <header>
         <h1>
-          <span className="pride-title">
+          <span className="pride-title" onClick={handlePrideClick}>
             <span className="p">P</span>
             <span className="r">R</span>
             <span className="i">I</span>
