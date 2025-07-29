@@ -70,7 +70,7 @@
 }
 
 .single-legend .link a {
-  width: max-content;
+  max-width: max-content;
 }
 
 .single-legend .link p {
