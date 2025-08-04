@@ -29,10 +29,10 @@ export default function Legend({ deck, totalPairs, handleLegendToggle }) {
           </div>
         ) : (
           <>
-            {deck.map((card, index) => (
+            {deck.map((card) => (
               <SingleLegend
                 card={card}
-                key={index}
+                key={card.keyword}
                 handleToggle={handleToggle}
               />
             ))}
